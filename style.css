@@ -1,12 +1,14 @@
 /*
-Theme Name:     TNA - child theme template
+Theme Name:     Archives sector - child theme
 Theme URI:      http://www.nationalarchives.gov.uk/
 Author:         The National Archives
 Author URI:     http://www.nationalarchives.gov.uk/
-Description:    This should be used when creating new child themes for TNA
-Template:       tna
+Description:    This should be used when creating new child themes for tna-base
+Template:       tna-base
 Version:        0.1
 License:        GNU General Public License
 License URI:    license.txt
-Text Domain:    tna
+Text Domain:    tna-base
 */
+
+/* Add custom CSS here to overwrite parent theme CSS */
