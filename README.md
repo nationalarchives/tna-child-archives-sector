@@ -1,1 +1,1 @@
-Child theme template
+## Child theme for the archives sector section of The National Archives web site
