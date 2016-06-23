@@ -9,15 +9,14 @@ function tnatheme_globals() {
     if (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
         $pre_path = '';
         $pre_crumbs = array(
-            'Site home title' => '/'
+            'Archives sector' => '/'
         );
     // If external TNA
     } else {
         $pre_crumbs = array(
-            'About' => '/',
-            'Site home title' => '/archives-sector/'
+            'Archives sector' => '/archives-sector/'
         );
-        $pre_path = '/about/archives-sector';
+        $pre_path = '/archives-sector';
     }
 }
 // If web development machine
@@ -26,7 +25,7 @@ if ( $_SERVER['SERVER_ADDR'] !== $_SERVER['REMOTE_ADDR'] ) {
     } else {
         $pre_path = '';
         $pre_crumbs = array(
-            'Site home title' => '/'
+            'Archives sector' => '/'
     );
 }
 
