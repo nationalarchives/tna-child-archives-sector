@@ -1,17 +1,19 @@
 <?php
 
 // For breadcrumbs and URLs
-// Edit as required
 function tnatheme_globals() {
     global $pre_path;
     global $pre_crumbs;
-    // If internal TNA
-    if (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
+    if (isset($_SERVER['HTTP_X_NGINX_PROXY'])) {
+        $pre_crumbs = array(
+            'Archives sector' => '/archives-sector/'
+        );
+        $pre_path = '/archives-sector';
+    } elseif (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
         $pre_path = '';
         $pre_crumbs = array(
             'Archives sector' => '/'
         );
-    // If external TNA
     } else {
         $pre_crumbs = array(
             'Archives sector' => '/archives-sector/'
