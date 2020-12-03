@@ -43,9 +43,13 @@ add_action( 'wp_head', 'dequeue_parent_style', 9999 );
 function tna_child_styles() {
     wp_register_style( 'tna-parent-styles', get_template_directory_uri() . '/css/base-sass.min.css', array(), EDD_VERSION, 'all' );
     wp_register_style( 'tna-child-styles', get_stylesheet_directory_uri() . '/style.css', array(), '0.1', 'all' );
+    wp_register_style( 'tna-child-publication-styles', get_stylesheet_directory_uri() . '/css/publication.css', array(), '0.1', 'all' );
     wp_enqueue_script( 'bootstrapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), '', true );
     wp_enqueue_style( 'tna-parent-styles' );
     wp_enqueue_style( 'tna-child-styles' );
+    if (is_page_template( 'publication.php' )){
+        wp_enqueue_style( 'tna-child-publication-styles' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'tna_child_styles' );
 
